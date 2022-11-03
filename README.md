@@ -1,8 +1,10 @@
 # E-Commerce-Back-End
 
 https://github.com/Jaxpi/E-Commerce-Back-End
+
 Please watch this walkthrough video for visual guidance to the application:
 
+https://drive.google.com/file/d/1s-3iVWAZKT4RwSU_LFTdxF92de9iJK5u/view
 
 ## Description
 
