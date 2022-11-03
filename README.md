@@ -11,18 +11,19 @@ This application allows a user to access the back-end of an e-commerce website. 
 ## Usage
 
 To use this, the user must utilize their integrated terminal and Insomnia Core. First the user runs their node server in the integrated terminal to initiate the server. Then they open Insomnia Core and type in the appropriate routes for their intended purpose. For category interactions the route is api/category (adding the category id for getting a specific category, updating a specific category, or deleting a specific category). For tag interactions the route is api/tag (adding the tag id for getting a specific tag, updating a specific tag, or deleting a specific tag). For product interactions the route is api/products (adding the product id for getting a specific product, updating a specific product, or deleting a specific product).
-For updating and creating, parameters must be included in the Insomnia Core body. The user must select body and choose "JSON," then enter information in the following manner:
-For creating a category:
-{"category_name": "newname"}
-For creating a tag:
-{"tag_name": "pumpkin spice"}
-For creating a product:
-{
-	"product_name": "Basketball",
-      "price": 200.00,
-      "stock": 3,
-      "tagIds": [1, 2, 3, 4]
-}
+
+For updating and creating, parameters must be included in the Insomnia Core body. The user must select body and choose "JSON," then enter information in the following manner:<br>
+For creating a category:<br>
+&nbsp;&nbsp;{"category_name": "newname"}<br>
+For creating a tag:<br>
+&nbsp;&nbsp;{"tag_name": "pumpkin spice"}<br>
+For creating a product:<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;"product_name": "Basketball",<br>
+&nbsp;&nbsp;&nbsp;"price": 200.00,<br>
+&nbsp;&nbsp;&nbsp;"stock": 3,<br>
+&nbsp;&nbsp;&nbsp;"tagIds": [1, 2, 3, 4]<br>
+&nbsp;&nbsp;}<br>
 For updating the user can follow the same formats as above, just changing the value to the new one (for updating a product, only the altered values should be included in the body).
 
 For a visual guide to these processes please refer to the walkthrough video provided above.
