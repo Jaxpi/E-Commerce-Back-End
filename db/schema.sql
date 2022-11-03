@@ -14,8 +14,8 @@ CREATE TABLE category (
 CREATE TABLE product (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   product_name VARCHAR(100) NOT NULL,
-  price DECIMAL NOT NULL,
-  stock INT NOT NULL DEFAULT 10,
+  price DECIMAL(10,2) NOT NULL,
+  stock INT NOT NULL DEFAULT 10 CHECK (stock >= 0),
   category_id INT,
   FOREIGN KEY (category_id)
   REFERENCES category(id)
