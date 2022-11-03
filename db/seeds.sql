@@ -1,32 +1,23 @@
 DELETE FROM category;
 INSERT INTO category (id, category_name)
 VALUES
-    ( 001, "Debuggers"),
-    ( 002, "Support"),
-    ( 003, "Testers"),
-    ( 004, "Complicated");
+    ( 001, "Sample Cat A"),
+    ( 002, "Sample Cat B");
 
 DELETE FROM product;
-INSERT INTO product (id, title, salary, department_id)
+INSERT INTO product (id, product_name, price, stock, category_id)
 VALUES
-    ( 001, "Peace Keeper", 1, 001),
-    ( 002, "Moral Compass", 50000, 001),
-    ( 003, "Ideas Guy", 40000, 001),
-    ( 004, "Tough Guy", 100000, 001),
-    ( 005, "Sidekick", 25000, 001),
-    ( 006, "Fighter", 15000, 002),
-    ( 007, "Guider", 10000, 002),
-    ( 008, "Lead Obstacle", 200000, 003),
-    ( 009, "Obstacle Supporter", 5000, 003),
-    ( 0010, "Emotional Mess", 472, 004),
-    ( 0011, "Human Xanax", 0, 004);
+    ( 001, "Sample Product A", 1.00, true, 001),
+    ( 002, "Sample Product B", 10.00, true, 002);
 
 DELETE FROM tag;
-INSERT INTO tag (id, first_name, last_name, role_id, manager_id)
+INSERT INTO tag (id, tag_name)
 VALUES
-    ( 001, "Aang", "Aangerson", 001, null),
+    ( 001, "Sample Tag A"),
+    ( 002, "Sample Tag B");
 
 DELETE FROM productTag;
-INSERT INTO productTag (id, first_name, last_name, role_id, manager_id)
+INSERT INTO productTag (id, product_id, tag_id)
 VALUES
-    ( 001, "Aang", "Aangerson", 001, null),
+    ( 001, 001, 001),
+    ( 002, 002, 002);
