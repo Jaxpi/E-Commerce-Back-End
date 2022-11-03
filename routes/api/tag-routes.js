@@ -10,9 +10,7 @@ router.get('/', (req, res) => {
     include: [{
       model: Product,
     },
-    { 
-      model: ProductTag,
-  }]
+    ]
   }) .then ((tags) => {
     res.json(tags)
   }) .catch ((err) => {
@@ -23,6 +21,16 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
+  Tag.findByPk(req.params.id, {
+    include: [{
+      model: Product,
+    },
+    ]
+  }) .then ((tag) => {
+    res.json(tag)
+  }) .catch ((err) => {
+    res.status(500).json (err)
+  })
 });
 
 router.post('/', (req, res) => {
